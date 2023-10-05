@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form action="" id="formulario">
+        <h2>FORMULARIO</h2>
+        <div class="input-group">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+
+            <label for="lastname">Apellido:</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido">
+
+            <label for="birthdate">Fecha de Nacimiento:</label>
+            <input type="date" name="birthdate" id="birthdate" required>
+
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" name="phone" id="phone" required pattern="[0-9]+" maxlength="10"
+                placeholder="Ingrese número de teléfono">
+            <label for="email">Correo:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo" required>
+            <label for="documentType">Tipo de documento de identidad</label>
+            <select name="documentType" id="documentType" class="catego" >
+                <option disabled selected hidden>Seleccione su documento</option>
+                <option value="Cédula-de-Ciudadanía">Cédula de ciudadanía</option>
+                <option value="Cédula-Extranjera">Cédula Extranjera</option>
+                <option value="Tarjeta-de-Identidad">Tarjeta de Identidad</option>
+                <option value="Permiso-por-Protección-Temporal">Permiso por Protección Temporal</option>
+                <option value="Permiso-Especial-de-Permanencia">Permiso Especial de Permanencia</option>
+            </select>
+            <label for="documentNumber">Número de documento:</label>
+            <input type="tel" name="documentNumber" id="documentNumber" required pattern="[0-9]+" maxlength="14"
+                placeholder="Ingrese número de documento">
+            <div>
+                <label for="gender">Género:</label>
+                <label for="male"><input type="radio" id="male" name="gender" value="Hombre"> Hombre</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="Mujer"> Mujer</label>
+            </div>
+            <label for="termsAndConditions" class="text">
+            <input type="checkbox" id="termsAndConditions" required value="acepta terminos y condicones"> Declaro
+                haber leído y aceptado los términos y condiciones</label>
+            <button   value="Enviar" class="button" onclick="formulario()">Enviar</button>
+            
+        </div>
+    </form>
+    <script src="formulario.js"></script>
+
+
+</body>
+
+</html>
